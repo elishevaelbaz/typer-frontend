@@ -1,4 +1,4 @@
-const URL = process.env.API_URL || "http://localhost:3000"
+const URL = process.env.REACT_APP_API_URL || "http://localhost:3000"
 
 // =====================
 // game fetches
@@ -104,6 +104,7 @@ export function login(username, password){
 }
 
 export function autoLogin(){
+  console.log("process.env.REACT_APP_API_URL", process.env.REACT_APP_API_URL)
   return fetch(`${URL}/autologin`, {
     credentials: "include" // tells browser to send cookies with fetch req
   })
