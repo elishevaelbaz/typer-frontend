@@ -74,6 +74,17 @@ export function getPassages(){
     .then(r => r.json())
 }
 
+export function createPassage(passageObj){
+  return fetch(`${URL}/passages`, {
+    method: 'POST',
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(passageObj)
+  }).then(r => r.json())
+}
+
 // =====================
 // user fetches
 // =====================
