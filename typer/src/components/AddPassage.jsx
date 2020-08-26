@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+const URL = process.env.API_URL || "https://typ3out.herokuapp.com"
+
 export default class AddPassage extends Component {
   passageTitle = React.createRef()
   passageBody = React.createRef()
@@ -11,7 +13,8 @@ export default class AddPassage extends Component {
       text: this.passageBody.current.value,
       time_allotted: 60
     }
-    fetch('http://localhost:3000/passages', {
+    //"https://typ3out.herokuapp.com"
+    fetch(`${URL}/passages`, {
       method: 'POST',
       credentials: "include",
       headers: {

@@ -1,5 +1,4 @@
-const URL = "https://typ3out.herokuapp.com"
-// "http://localhost:3000"
+const URL = process.env.API_URL || "http://localhost:3000"
 
 // =====================
 // game fetches
