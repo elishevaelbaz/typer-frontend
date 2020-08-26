@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-const URL = process.env.API_URL || "https://typ3out.herokuapp.com"
+const URL = process.env.REACT_APP_API_URL || "https://typ3out.herokuapp.com"
 
 export default class AddPassage extends Component {
   passageTitle = React.createRef()
