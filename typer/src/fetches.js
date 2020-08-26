@@ -1,28 +1,31 @@
+const URL = "https://typ3out.herokuapp.com"
+// "http://localhost:3000"
+
 // =====================
 // game fetches
 // =====================
 export function getGame(id){
-  return fetch(`http://localhost:3000/games/${id}`, {
+  return fetch(`${URL}/games/${id}`, {
       credentials: "include"
     })
       .then(r => r.json())
 }
 
 export function getHighScoreGames(){
-  return fetch("http://localhost:3000/games")
+  return fetch(`${URL}/games`)
   .then(r => r.json())
 }
 
 // custom route to get currentUser's game stats
 export function getUserstats(){
-  return fetch('http://localhost:3000/userstats',{
+  return fetch(`${URL}/userstats`,{
     credentials: "include"
   })
   .then(r => r.json())
 }
 
 export function deleteGame(id) {
-  return fetch(`http://localhost:3000/games/${id}`, {
+  return fetch(`${URL}/games/${id}`, {
     method: 'DELETE',
     credentials: "include",
     headers: {
@@ -33,7 +36,7 @@ export function deleteGame(id) {
 }
 
 export function updateGame(id, body){
-  return fetch(`http://localhost:3000/games/${id}`, {
+  return fetch(`${URL}/games/${id}`, {
       method: "PATCH",
       credentials: "include",
       headers: {
@@ -53,7 +56,7 @@ export function createGame(passageId){
 
   console.log("postBody", postBody)
 
-  return fetch("http://localhost:3000/games", {
+  return fetch(`${URL}/games`, {
     method: "POST",
     credentials: "include",
     headers: {
@@ -68,7 +71,7 @@ export function createGame(passageId){
 // passage fetches
 // =====================
 export function getPassages(){
-  return fetch('http://localhost:3000/passages')
+  return fetch(`${URL}/passages`)
     .then(r => r.json())
 }
 
@@ -76,7 +79,7 @@ export function getPassages(){
 // user fetches
 // =====================
 export function signUp(username, password){
-  return fetch("http://localhost:3000/users", {
+  return fetch(`${URL}/users`, {
     method: "POST",
     credentials: "include",
     headers: {
@@ -89,7 +92,7 @@ export function signUp(username, password){
 }
 
 export function login(username, password){
-  return fetch("http://localhost:3000/login", {
+  return fetch(`${URL}/login`, {
     method: "POST",
     credentials: "include",
     headers: {
@@ -102,7 +105,7 @@ export function login(username, password){
 }
 
 export function autoLogin(){
-  return fetch("http://localhost:3000/autologin", {
+  return fetch(`${URL}/autologin`, {
     credentials: "include" // tells browser to send cookies with fetch req
   })
   .then(r => {
@@ -116,7 +119,7 @@ export function autoLogin(){
 }
 
 export function logout(){
-  return fetch("http://localhost:3000/logout", {
+  return fetch(`${URL}/logout`, {
     credentials: "include"
   })
   .then(r => r.json())
