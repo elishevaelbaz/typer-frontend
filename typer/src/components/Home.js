@@ -6,7 +6,6 @@ import { getPassages, createGame} from '../fetches'
 export default class Home extends Component {
 
   state = {
-    // users: [],
     passages: [],
     loggedIn: false,
     game: {},

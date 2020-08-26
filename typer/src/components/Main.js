@@ -54,7 +54,6 @@ class Main extends Component {
     console.log("in main, state:", this.state)
     return (
       <BrowserRouter>
-        {/* <h3 style={{color:"white"}}>{this.state.currentUser ? `Hi, ${this.state.currentUser.username}`: "Please login"}</h3> */}
         <main>
           <SideBar currentUser={this.state.currentUser} handleLogout={this.handleLogout}/>
           <Switch>
@@ -65,19 +64,11 @@ class Main extends Component {
                 message={this.state.message}
               />
               )}/>
-            {/* <Route exact path="/login" render={() => (
-              <Login
-                handleLogIn={this.handleLogin}
-              />
-            )}/> */}
+            
             <Route path="/login">
             {this.state.currentUser ?  <Redirect to='/' /> : <Login handleLogIn={this.handleLogin} /> }
           </Route>
-            {/* <Route exact path="/signup" render={() => (
-              <SignUp
-                handleLogIn={this.handleLogin}
-              />
-            )}/> */}
+
             <Route path="/signup">
               {this.state.currentUser ?  <Redirect to='/' /> : <SignUp handleLogIn={this.handleLogin}/> }
             </Route>

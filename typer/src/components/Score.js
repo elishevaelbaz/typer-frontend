@@ -7,7 +7,6 @@ export default class Score extends Component {
           <div className="scoreStats">{this.props.username}</div>
           <div className="scoreStats">{this.props.speed} WPM</div>
           <div className="scoreStats">{this.props.accuracy}%</div>
-          {/* TODO put passage name instead */}
           <div className="scoreStats">{this.props.passage.name || this.props.passage.id}</div>
         </div>
     )

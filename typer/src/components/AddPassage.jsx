@@ -11,7 +11,6 @@ export default class AddPassage extends Component {
       text: this.passageBody.current.value,
       time_allotted: 60
     }
-    // console.log(obj)
     fetch('http://localhost:3000/passages', {
       method: 'POST',
       credentials: "include",

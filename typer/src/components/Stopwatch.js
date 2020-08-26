@@ -5,13 +5,9 @@ import 'odometer/themes/odometer-theme-default.css'
 export default class Stopwatch extends Component{
 
   state = {
-    // isRunning: false,
     intervalID: null,
     timeLeft: "" // 6 when testing
   };
-
-  // componentDidMount() {
-  // }
 
   componentDidUpdate(prevProps, prevState) {
     // if the game started (by typing in the input feld) and there is no intervalID yet
@@ -31,8 +27,6 @@ export default class Stopwatch extends Component{
         timeLeft: this.props.timeAllotted
       })
     }
-
-
   }
 
   componentWillUnmount() {
@@ -61,9 +55,7 @@ export default class Stopwatch extends Component{
     //PATCH scores to db   -- see gameboard component
     //and display to user
     this.props.handleGameOver()
-
   }
-
 
   render() {
     return (

@@ -9,13 +9,10 @@ export default class GameBoard extends Component{
   state = {
     game: null,
     typingInput: "",
-    // length: 0,
-    // lastLetter: "",
     incorrect: 0,
     gameStatus: null
   }
 
-  // text = this.state.game.passage.text
   id = this.props.match.params.id
 
   componentDidMount(){
@@ -67,7 +64,6 @@ export default class GameBoard extends Component{
       // character in the passage
       const passageChar = this.state.game.passage.text[length -1 ]
 
-      // console.log(char === passageChar)
       if (char === passageChar){
         this.setState({
           correct: prevState.correct + 1
@@ -138,15 +134,8 @@ export default class GameBoard extends Component{
   })
 }
 
-// showTimeAllotted = () => {
-//   return this.state.game.passage.time_allotted
-// }
-
 
   render(){
-    // console.log("props", this.props)
-    // const time = this.state.game ? this.state.game.passage.time_allotted : "test"
-    // console.log("time" , time)
     return (
       <div className="content">
         <div className="gameboardContainer">
@@ -201,7 +190,6 @@ export default class GameBoard extends Component{
                 className="passageInput"
                 name="typingInput"
                 spellCheck="false"
-                // placeholder={"begin typing here"}
                 value={this.state.typingInput}
                 onChange={this.handleTyping}
                 disabled={this.state.gameStatus === "over"} // not sure how we want to set it up

@@ -16,8 +16,6 @@ const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // console.log(loginInput)
-
     login(username, password)
       .then(user => {
         console.log("user", user)
@@ -35,8 +33,6 @@ const Login = (props) => {
   const handleChange = (e) => {
     setloginInput({...loginInput, [e.target.name]: e.target.value})
   }
-
-
 
   return(
     <>

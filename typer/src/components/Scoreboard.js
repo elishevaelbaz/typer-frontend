@@ -44,9 +44,6 @@ export default class Scoreboard extends Component {
               />
             )}
         </div>
-
-
-      {/* </div> */}
       </div>
     )
   }

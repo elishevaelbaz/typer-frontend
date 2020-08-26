@@ -7,7 +7,7 @@ export default class Tile extends Component {
         <div className="tileCard" onClick={() => this.props.handleNewGame(this.props.id)}>
           {/* <p>{this.props.language}</p>
           <p>{this.props.text}</p> */}
-          {/* first few words of the passage*/}
+          {/* if no name, display first few words of the passage */}
           {this.props.name || `${this.props.text.slice(0, 55)}...`}
         </div>
       </div>
