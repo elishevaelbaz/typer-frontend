@@ -35,7 +35,6 @@ export default class Stopwatch extends Component{
 
   startTimer(){
     const intervalID = setInterval(() => {
-      console.log(this.state)
       // if (this.state.timeLeft > 0){
         this.setState(prevState => ({
           timeLeft: prevState.timeLeft - 1
