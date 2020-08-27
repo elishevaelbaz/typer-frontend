@@ -1,5 +1,6 @@
 // const URL = process.env.REACT_APP_API_URL || "http://localhost:3000"
 const URL = "https://typ3out.herokuapp.com"
+// const URL = "http://localhost:3000"
 
 // =====================
 // game fetches
