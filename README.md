@@ -3,7 +3,7 @@ by [Elisheva](https://github.com/elishevaelbaz) and [Dina](https://github.com/di
 
 [Live: typ3out.netlify.app](https://typ3out.netlify.app/) 
 
-<img src="public/typeout-test-screenshot.png" alt="typeout image screenshot">
+<img src="typer/src/assests/typeout-test-screenshot.png" alt="typeout image screenshot">
 
 Typ3out is an app to practice and test typing speed and accuracy.  
 
