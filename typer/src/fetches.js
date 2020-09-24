@@ -1,6 +1,6 @@
-let URL = "https://typ3out.herokuapp.com"
-if (process.env.NODE_ENV === "development"){
-   URL = "http://localhost:3000"
+let URL = "http://localhost:3000"
+if (process.env.NODE_ENV === "production"){
+  URL = "https://typ3out.herokuapp.com"
 } 
 
 // =====================
