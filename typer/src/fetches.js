@@ -1,5 +1,7 @@
-// const URL = process.env.REACT_APP_API_URL || "http://localhost:3000"
-const URL = "https://typ3out.herokuapp.com" // const URL = "http://localhost:3000"
+let URL = "https://typ3out.herokuapp.com"
+if (process.env.NODE_ENV === "development"){
+   URL = "http://localhost:3000"
+} 
 
 // =====================
 // game fetches
