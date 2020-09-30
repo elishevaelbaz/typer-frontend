@@ -22,14 +22,13 @@ Users are able to:
 ### Getting started
 #### To run on your local machine:
 
-##### Prerequisites:
+#### Prerequisites:
 - Node.js
 - npm
 - Ruby on Rails
 - PostgreSQL
 
-##### Instructions:  
-__To run on your local machine:__  
+#### Instructions:  
 Clone both the [frontend](https://github.com/elishevaelbaz/typer-frontend) and the [backend](https://github.com/elishevaelbaz/typer-backend) repositories onto your machine using `git clone`.  
 
 `cd` into the backend repository  
